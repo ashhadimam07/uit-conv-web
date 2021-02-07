@@ -8,7 +8,7 @@ const nanosecond = document.querySelector('#nanosecond');
 function minuteToSecToMillisecToHour() {
     const min = parseFloat(minute.value);
     const sec = 60 * min;
-    const hr = 0.0166666667 * min;
+    const hr = (1 / 60) * min;
     const ms = 60000 * min;
     const mics = 60000000 * min;
     const ns = 60000000000 * min;
@@ -23,7 +23,7 @@ minuteToSecToMillisecToHour();
 
 function secondToMinToMillisecToHour() {
     const sec = parseFloat(second.value);
-    const min = 0.0166666667 * sec;
+    const min = (1 / 60) * sec;
     const hr = 0.0002777778 * sec;
     const ms = 1000 * sec;
     const mics = 1000000 * sec;
