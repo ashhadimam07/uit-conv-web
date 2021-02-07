@@ -4,7 +4,7 @@ const fahrenheit = document.querySelector('#fahr');
 
 function celTokelTofahr() {
     const cel = parseFloat(celsius.value);
-    const kel = cel + 273.15;
+    const kel = 273.15 + cel;
     const fahr = (9 / 5) * cel + 32;
     kelvin.value = kel;
     fahrenheit.value = fahr;
