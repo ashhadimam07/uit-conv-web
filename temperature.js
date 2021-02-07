@@ -4,8 +4,8 @@ const fahrenheit = document.querySelector('#fahr');
 
 function celTokelTofahr() {
     const cel = parseFloat(celsius.value);
-    const kel = 274.15 * cel;
-    const fahr = 33.8 * cel;
+    const kel = cel + 274.15;
+    const fahr = (9 / 5) * cel + 32;
     kelvin.value = kel;
     fahrenheit.value = fahr;
 }
@@ -14,8 +14,8 @@ celTokelTofahr();
 
 function kelTocelTofahr() {
     const kel = parseFloat(kelvin.value);
-    const cel = -272.15 * kel;
-    const fahr = -457.87 * kel;
+    const cel = kel - 273.15;
+    const fahr = (kel - 273.15) * (9 / 5) + 32;
     celsius.value = cel;
     fahrenheit.value = fahr;
 }
@@ -24,8 +24,8 @@ kelTocelTofahr();
 
 function farTocelTokel() {
     const fahr = parseFloat(fahrenheit.value);
-    const cel = -17.2222222223 * fahr;
-    const kel = 255.9277778 * fahr;
+    const cel = (fahr - 32) * (5 / 9);
+    const kel = (fahr - 32) * (5 / 9) + 273.15;
     celsius.value = cel;
     kelvin.value = kel;
 }
