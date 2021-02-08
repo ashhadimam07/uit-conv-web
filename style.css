@@ -14,12 +14,17 @@ body {
   background-color: #113448;
   padding-top: 20px;
   color: wheat;
+  margin: 0 auto;
+  padding-left: 40px;
+  padding-right: 20px;
 }
 
 .div-class {
-  width: 1200px;
-  margin: 0 auto;
+  display: grid;
+  width: 100%;
+  grid-template-columns: 400px auto 40px;
   padding-bottom: 20px;
+  margin: 0;
 }
 
 .nav {
