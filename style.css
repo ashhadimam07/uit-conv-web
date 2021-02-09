@@ -89,7 +89,7 @@ input[type="checkbox"] {
   border: 1px solid wheat;
   background-color: #71c2af;
   box-shadow: 0 1px 5px rgb(97, 97, 97);
-  padding-top: 40px;
+  padding-top: 25px;
   margin: 0 auto;
 }
 
@@ -145,6 +145,7 @@ p {
   color: #113448;
   font-size: 16px;
   font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .para-content {
