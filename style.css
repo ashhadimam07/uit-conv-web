@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html {
   position: relative;
   min-height: 100%;
@@ -11,60 +19,66 @@ body {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.header-class {
-  background-color: #113448;
-  padding-top: 20px;
-  color: wheat;
-  margin: 0 auto;
-  padding-left: 40px;
-  padding-right: 20px;
-}
-
-.div-class {
-  display: grid;
+nav {
+  display: flex;
+  height: 80px;
   width: 100%;
-  grid-template-columns: 300px auto;
-  padding-bottom: 20px;
-  margin: 0;
+  background-color: #113448;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+  flex-wrap: wrap;
 }
 
-.nav {
-  text-align: right;
-  font-size: 14px;
-}
-
-.nav-bar {
+nav .logo {
   color: wheat;
-  padding: 2px 6px;
-  margin: 2px;
-  text-decoration: solid;
-  display: block;
-  float: right;
-  text-align: center;
-  border: 1px solid wheat;
-  border-radius: 8px;
-  box-shadow: 0 1px 5px rgb(150, 130, 130);
+  font-size: 35px;
+  font-weight: 600;
 }
 
-a {
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 5px;
+}
+
+nav ul li a {
+  color: wheat;
   text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
 }
 
-.header-title {
-  text-align: left;
-  margin: 2px;
-  padding-bottom: 5px;
-  float: left;
+nav ul li a:hover {
+  color: #113448;
+  background: wheat;
 }
 
-.nav-bar:hover {
-  background-color: #14bf98;
+nav .menu-btn i {
+  color: wheat;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+
+input[type="checkbox"] {
+  display: none;
 }
 
 .main-heading {
   text-align: center;
   color: #113448;
   font-size: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .input1 {
@@ -75,6 +89,7 @@ a {
   border: 1px solid wheat;
   background-color: #71c2af;
   box-shadow: 0 1px 5px rgb(97, 97, 97);
+  padding-top: 40px;
   margin: 0 auto;
 }
 
@@ -144,7 +159,7 @@ main {
   position: absolute;
   left: 0;
   bottom: 0;
-  height: 20px;
+  height: 40px;
   padding-top: 10px;
   padding-bottom: 10px;
   width: 100%;
@@ -168,25 +183,54 @@ main {
     margin-bottom: 20px;
     width: 80%;
   }
+}
 
-  .header-class {
-    padding-left: 20px;
+@media (max-width: 1000px) {
+  nav {
+    padding: 0 40px 0 50px;
+  }
+}
+
+@media (max-width: 920px) {
+  nav .menu-btn i {
+    display: block;
   }
 
-  .div-class {
-    display: grid;
-    grid-template: none;
+  nav ul {
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: #113448;
+    height: 100vh;
     width: 100%;
-    padding-bottom: 20px;
-    margin: 0 auto;
-  }
-
-  .header-title {
     text-align: center;
+    display: block;
+    transition: all 0.3s ease;
   }
 
-  .nav-bar {
-    float: none;
-    margin: 4px;
+  #click:checked ~ ul {
+    left: 0;
+  }
+
+  nav ul li {
+    width: 100%;
+    margin: 40px 0;
+  }
+
+  nav ul li a {
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  nav ul li a:hover {
+    background: none;
+    color: #113448;
+  }
+
+  #click:checked ~ ul li a {
+    margin-left: 0;
   }
 }
