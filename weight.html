@@ -6,45 +6,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unit Converter-Weight</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <nav>
-        <div class="logo">Unit Converter</div>
-        <input type="checkbox" id="click">
-        <label for="click" class="menu-btn"><i class="fas fa-bars"></i></label>
-          <ul>
-              <li><a href="/">Length</a></li>
-              <li><a href="weight.html">Weight</a></li>
-              <li><a href="temperature.html">Temperature</a></li>
-              <li><a href="time.html">Time</a></li>
-              <li><a href="currency.html">Currency</a></li>
-          </ul>
-      </nav>
+    <header>
+        <a href="index.html" class="logo">UNIT CONVERTER</a>
+        <span class="menu-toggle"><i  class="fa" aria-hidden="true"></i></span>
+        <nav>
+            <ul>
+                <li><a href="https://utility-web-tools.netlify.app" class="active">Home</a></li>
+                <li><a href="index.html">Length</a></li>
+                <li><a href="/">Weight</a></li>
+                <li><a href="temperature.html">Temperature</a></li>
+                <li><a href="time.html">Time</a></li>
+                <li><a href="currency.html">Currency</a></li>
+            </ul>
+        </nav>
+        <div class="clearfix"></div>
+    </header>
     <main>
         <h2 class="main-heading">Weight Converter</h2>
         <div class="input2">
             <div class="input1">
                 <p>Gram</p>
-                <input type="number" id="gram" placeholder="Gram">
+                <input type="number" id="gram" placeholder="g">
                 <p class="para-content">Kilogram</p>
-                <input type="number" id="kgram" placeholder="Kilogram">
+                <input type="number" id="kgram" placeholder="kg">
                 <p class="para-content">Milligram</p>
-                <input type="number" id="mgram" placeholder="Milligram">
+                <input type="number" id="mgram" placeholder="mg">
             </div>
             <div class="input1">
                 <p>Pound</p>
-                <input type="number" id="pound" placeholder="Pound">
+                <input type="number" id="pound" placeholder="lb">
                 <p class="para-content">Ounce</p>
-                <input type="number" id="ounce" placeholder="Ounce">
+                <input type="number" id="ounce" placeholder="oz">
                 <p class="para-content">Carrat</p>
-                <input type="number" id="carrat" placeholder="Carrat">
+                <input type="number" id="carrat" placeholder="ct">
             </div>
         </div>
     </main>
     <footer class="footer">
-        <div class="footer-heading">Utility Tools: Unit Converter - Weight</div>
+        <div class="footer-heading">WEB TOOLS: UNIT CONVERTER - WEIGHT</div>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" 
+    crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.menu-toggle').click(function() {
+                $('.menu-toggle').toggleClass('active')
+                $('nav').toggleClass('active')
+            })
+        })
+    </script>
     <script src="./weight.js"></script>
 </body>
 </html>

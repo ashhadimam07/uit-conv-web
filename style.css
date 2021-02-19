@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('font-awesome/fontawesome-webfont.ttf') format('truetype');
+}
 
 * {
   margin: 0;
@@ -15,79 +18,83 @@ html {
 body {
   margin: 0;
   margin-bottom: 40px;
-  background-color: wheat;
+  background-color: white;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-nav {
-  display: flex;
-  height: 80px;
-  width: 100%;
-  background-color: #113448;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 50px 0 100px;
-  flex-wrap: wrap;
+header {
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 10px;
+  background: #3b1c32;
+  box-sizing: border-box;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-nav .logo {
+.logo {
   color: wheat;
-  font-size: 35px;
-  font-weight: 600;
+  height: 60px;
+  font-size: 36px;
+  line-height: 60px;
+  padding: 0 20px;
+  background-color: #3b1c32;
+  text-align: center;
+  box-sizing: border-box;
+  float: left;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+nav {
+  float: right;
+}
+
+.clearfix {
+  clear: both;
 }
 
 nav ul {
+  margin: 0;
+  padding: 0;
   display: flex;
-  flex-wrap: wrap;
-  list-style: none;
 }
 
 nav ul li {
-  margin: 0 5px;
+  list-style: none;
 }
 
 nav ul li a {
-  color: wheat;
+  display: block;
+  margin: 10px 0;
+  padding: 10px 20px;
   text-decoration: none;
-  font-size: 18px;
-  font-weight: 500;
-  padding: 8px 15px;
-  border-radius: 5px;
-  letter-spacing: 1px;
-  transition: all 0.3s ease;
-}
-
-nav ul li a:hover {
-  color: #113448;
-  background: wheat;
-}
-
-nav .menu-btn i {
   color: wheat;
-  font-size: 22px;
-  cursor: pointer;
-  display: none;
+  font-size: 20px;
 }
 
-input[type="checkbox"] {
-  display: none;
+nav ul li a.active,
+nav ul li a:hover {
+  background: #c5866f;
+  color: #fff;
+  transition: 0.5s;
 }
 
 .main-heading {
   text-align: center;
-  color: #113448;
+  color: rgb(1, 54, 70);
   font-size: 30px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 35px;
+  margin-bottom: 35px;
 }
 
 .input1 {
   display: flex;
   flex-direction: column;
-  width: 40%;
+  width: 35%;
   height: 400px;
   border: 1px solid wheat;
-  background-color: #71c2af;
+  background-color: #c5866f;
   box-shadow: 0 1px 5px rgb(97, 97, 97);
   padding-top: 25px;
   margin: 0 auto;
@@ -100,7 +107,7 @@ input[type="checkbox"] {
 }
 
 ::placeholder {
-  color: wheat;
+  color: rgb(1, 54, 70);
 }
 
 #kgram,
@@ -136,8 +143,8 @@ input[type="checkbox"] {
   font-size: 15px;
   width: 75%;
   box-shadow: 0 1px 5px rgb(97, 97, 97);
-  background-color: #113448;
-  color: wheat;
+  background-color: #e1bb80;
+  color: rgb(1, 54, 70);
 }
 
 p {
@@ -164,13 +171,23 @@ main {
   padding-top: 10px;
   padding-bottom: 10px;
   width: 100%;
-  background-color: #113448;
+  background-color: #3b1c32;
 }
 
 .footer-heading {
   color: wheat;
   text-align: center;
   font-size: 16px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
 }
 
 @media screen and (max-width: 1000px) {
@@ -186,52 +203,62 @@ main {
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1050px) {
+  .menu-toggle {
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    background: wheat;
+    float: right;
+    cursor: pointer;
+    text-align: center;
+    font-size: 30px;
+    color: #3b1c32;
+  }
+
+  .menu-toggle ::before {
+    content: '\f0c9';
+    line-height: 40px;
+  }
+
+  .menu-toggle.active ::before {
+    content: '\f00d';
+  }
+
   nav {
-    padding: 0 40px 0 50px;
+    display: none;
+  }
+
+  nav.active {
+    display: block;
+    width: 100%;
+  }
+
+  nav.active ul {
+    display: block;
+  }
+
+  nav.active ul a {
+    margin: 0;
   }
 }
 
-@media (max-width: 1000px) {
-  nav .menu-btn i {
-    display: block;
+@media (max-width: 430px) {
+  .logo {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 365px) {
+  .logo {
+    font-size: 22px;
   }
 
-  nav ul {
-    position: fixed;
-    top: 80px;
-    left: -100%;
-    background: #113448;
-    height: 100vh;
-    width: 100%;
+  .menu-toggle {
+    height: 36px;
+    width: 36px;
+    font-size: 22px;
     text-align: center;
-    display: block;
-    transition: all 0.3s ease;
-  }
-
-  #click:checked ~ ul {
-    left: 0;
-  }
-
-  nav ul li {
-    width: 100%;
-    margin: 40px 0;
-  }
-
-  nav ul li a {
-    width: 100%;
-    margin-left: -100%;
-    display: block;
-    font-size: 20px;
-    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  }
-
-  nav ul li a:hover {
-    background: none;
-    color: #28d8af;
-  }
-
-  #click:checked ~ ul li a {
-    margin-left: 0;
   }
 }

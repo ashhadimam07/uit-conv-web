@@ -6,47 +6,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unit Converter-Time</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <nav>
-        <div class="logo">Unit Converter</div>
-        <input type="checkbox" id="click">
-        <label for="click" class="menu-btn"><i class="fas fa-bars"></i></label>
-          <ul>
-              <li><a href="/">Length</a></li>
-              <li><a href="weight.html">Weight</a></li>
-              <li><a href="temperature.html">Temperature</a></li>
-              <li><a href="time.html">Time</a></li>
-              <li><a href="currency.html">Currency</a></li>
-          </ul>
-      </nav>
+    <header>
+        <a href="index.html" class="logo">UNIT CONVERTER</a>
+        <span class="menu-toggle"><i  class="fa" aria-hidden="true"></i></span>
+        <nav>
+            <ul>
+                <li><a href="https://utility-web-tools.netlify.app" class="active">Home</a></li>
+                <li><a href="index.html">Length</a></li>
+                <li><a href="weight.html">Weight</a></li>
+                <li><a href="temperature.html">Temperature</a></li>
+                <li><a href="/">Time</a></li>
+                <li><a href="currency.html">Currency</a></li>
+            </ul>
+        </nav>
+        <div class="clearfix"></div>
+    </header>
     <main>
         <h2 class="main-heading">Time Converter</h2>
         <div class="input2">
             <div class="input1">
                 <p>Minute</p>
-                <input type="number" id="minute" placeholder="Minutes">
+                <input type="number" id="minute" placeholder="min">
                 <p class="para-content">Second</p>
-                <input type="number" id="second" placeholder="Seconds">
+                <input type="number" id="second" placeholder="sec">
                 <p class="para-content">Hour</p>
-                <input type="number" id="hour" placeholder="Hour">
+                <input type="number" id="hour" placeholder="hrs">
             </div>
             <div class="input1">
                 <p>Millisecond</p>
-                <input type="number" id="millisecond" placeholder="Millisecond">
+                <input type="number" id="millisecond" placeholder="ms">
                 <p class="para-content">Microsecond</p>
-                <input type="number" id="microsecond" placeholder="Microsecond">
+                <input type="number" id="microsecond" placeholder="μs">
                 <p class="para-content">Nanosecond</p>
-                <input type="number" id="nanosecond" placeholder="Nanosecond">
+                <input type="number" id="nanosecond" placeholder="ns">
             </div>
             
             
         </div>
     </main>
     <footer class="footer">
-        <div class="footer-heading">Utility Tools: Unit Converter - Time</div>
+        <div class="footer-heading">WEB TOOLS: UNIT CONVERTER - TIME</div>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" 
+    crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.menu-toggle').click(function() {
+                $('.menu-toggle').toggleClass('active')
+                $('nav').toggleClass('active')
+            })
+        })
+    </script>
     <script src="./time.js"></script>
 </body>
 </html>

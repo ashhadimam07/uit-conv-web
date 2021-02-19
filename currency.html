@@ -6,45 +6,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unit Converter-Currency</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <nav>
-        <div class="logo">Unit Converter</div>
-        <input type="checkbox" id="click">
-        <label for="click" class="menu-btn"><i class="fas fa-bars"></i></label>
-          <ul>
-              <li><a href="/">Length</a></li>
-              <li><a href="weight.html">Weight</a></li>
-              <li><a href="temperature.html">Temperature</a></li>
-              <li><a href="time.html">Time</a></li>
-              <li><a href="currency.html">Currency</a></li>
-          </ul>
-      </nav>
+    <header>
+        <a href="index.html" class="logo">UNIT CONVERTER</a>
+        <span class="menu-toggle"><i  class="fa" aria-hidden="true"></i></span>
+        <nav>
+            <ul>
+                <li><a href="https://utility-web-tools.netlify.app" class="active">Home</a></li>
+                <li><a href="index.html">Length</a></li>
+                <li><a href="weight.html">Weight</a></li>
+                <li><a href="temperature.html">Temperature</a></li>
+                <li><a href="time.html">Time</a></li>
+                <li><a href="/">Currency</a></li>
+            </ul>
+        </nav>
+        <div class="clearfix"></div>
+    </header>
     <main>
         <h2 class="main-heading">Currency Converter</h2>
         <div class="input2">
             <div class="input1">
                 <p>Indian Rupees</p>
-                <input type="number" id="indian-rs" placeholder="Indian Rupee">
+                <input type="number" id="indian-rs" placeholder="₹">
                 <p class="para-content">Euro</p>
-                <input type="number" id="euro" placeholder="Euro">
+                <input type="number" id="euro" placeholder="€">
                 <p class="para-content">US Dollar</p>
-                <input type="number" id="dollar" placeholder="US Dollar">
+                <input type="number" id="dollar" placeholder="$">
             </div>
             <div class="input1">
                 <p>UAE Dirham</p>
-                <input type="number" id="dirham" placeholder="UAE Dirham">
+                <input type="number" id="dirham" placeholder="د.إ">
                 <p class="para-content">Australian Dollar</p>
-                <input type="number" id="adollar" placeholder="Australian Dollar">
+                <input type="number" id="adollar" placeholder="A$">
                 <p class="para-content">Chinese Yuan</p>
-                <input type="number" id="cyuan" placeholder="Chinese Yuan">
+                <input type="number" id="cyuan" placeholder="¥">
             </div>
         </div>
     </main>
     <footer class="footer">
-        <div class="footer-heading">Utility Tools: Unit Converter - Currency</div>
+        <div class="footer-heading">WEB TOOLS: UNIT CONVERTER - CURRENCY</div>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" 
+    crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.menu-toggle').click(function() {
+                $('.menu-toggle').toggleClass('active')
+                $('nav').toggleClass('active')
+            })
+        })
+    </script>
     <script src="./currency.js"></script>
 </body>
 </html>
