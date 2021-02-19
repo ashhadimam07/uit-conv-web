@@ -86,6 +86,7 @@ nav ul li a:hover {
   font-size: 30px;
   margin-top: 35px;
   margin-bottom: 35px;
+  text-decoration: underline;
 }
 
 .input1 {
@@ -96,8 +97,10 @@ nav ul li a:hover {
   border: 1px solid wheat;
   background-color: #c5866f;
   box-shadow: 0 1px 5px rgb(97, 97, 97);
+  border-radius: 8px;
   padding-top: 25px;
   margin: 0 auto;
+  margin-bottom: 50px;
 }
 
 .input2 {
@@ -163,6 +166,26 @@ main {
   margin-bottom: 100px;
 }
 
+.content {
+  margin: 0 auto;
+  align-items: center;
+  border: 1px solid wheat;
+  background-color: #c5866f;
+  border-radius: 8px;
+  box-shadow: 0 1px 5px rgb(97, 97, 97);
+  width: 85%;
+  padding: 20px;
+}
+
+.content h2,
+h4 {
+  color: rgb(1, 54, 70);
+}
+
+.content ul {
+  padding-left: 20px;
+}
+
 .footer {
   position: absolute;
   left: 0;
@@ -200,6 +223,10 @@ input[type=number] {
   .input1 {
     margin-bottom: 40px;
     width: 80%;
+  }
+
+  .content {
+    width: 80.2%;
   }
 }
 
